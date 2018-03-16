@@ -1,0 +1,28 @@
+ aws cloudformation create-stack --template-body file://templates/single_instance.yml --stack-name single-instance --parameters ParameterKey=KeyName,ParameterValue= 
+ 
+ 
+ 
+ aws cloudformation create-stack --template-body file://ec2-demo.txt --stack-name single-instance --parameters ParameterKey=KeyName,ParameterValue=windows ParameterKey=InstanceType,ParameterValue=t2.micro ParameterKey=InstanceType,ParameterValue=t2.micro
+ 
+ aws cloudformation create-stack --template-body file://templates/single_instance.yml --stack-name single-instance --parameters ParameterKey=KeyName,ParameterValue= aws cloudformation create-stack --template-body file://ec2-demo.txt --stack-name single-instance --parameters ParameterKey=KeyName,ParameterValue=windows ParameterKey=InstanceType,ParameterValue=t2.micro ParameterKey=InstanceType,ParameterValue=t2.micro
+ 
+ 
+ alias server1=ssh -i /home/ec2-user/test.pem server1
+ alias server2=ssh -i /home/ec2-user/demo.key server2
+ 
+ 
+aws ec2 describe-instances |find "PublicIpAddress"
+                    "PublicIpAddress": "34.232.68.132",
+                    "PublicIpAddress": "34.204.187.208",
+                    "PublicIpAddress": "34.204.173.15",
+                    "PublicIpAddress": "35.168.8.112",
+                    "PublicIpAddress": "54.164.171.200",
+                    "PublicIpAddress": "34.239.135.242",
+                    "PublicIpAddress": "52.23.155.82",
+                    "PublicIpAddress": "34.234.215.115",
+                    "PublicIpAddress": "34.236.143.229",
+                    "PublicIpAddress": "34.237.143.102",
+                    "PublicIpAddress": "54.92.196.141",
+                    "PublicIpAddress": "34.227.172.49",
+                    "PublicIpAddress": "54.86.88.252",
+                    "PublicIpAddress": "54.158.39.29",
